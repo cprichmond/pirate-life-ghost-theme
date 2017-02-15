@@ -1,0 +1,30 @@
+{
+  "name": "pirate-life",
+  "version": "0.0.1",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "inuit.css": "~5.0.1",
+    "inuit-defaults": "~0.2.1",
+    "inuit-responsive-settings": "~0.1.3",
+    "inuit-mixins": "~0.2.3",
+    "inuit-functions": "~0.2.0",
+    "inuit-responsive-tools": "~0.1.3",
+    "inuit-normalize": "~3.0.1",
+    "inuit-box-sizing": "~0.2.0",
+    "inuit-page": "~0.2.1",
+    "inuit-images": "~0.3.2",
+    "inuit-layout": "~0.3.2",
+    "inuit-widths": "~0.3.2",
+    "inuit-widths-responsive": "~0.1.3"
+  },
+  "devDependencies": {
+    "jquery": "~2.1.3"
+  }
+}

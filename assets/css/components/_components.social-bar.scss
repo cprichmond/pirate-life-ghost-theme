@@ -1,0 +1,71 @@
+.social-bar {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+  padding: 5px 5px;
+  top: 0;
+
+  .container {
+    line-height: 1;
+  }
+
+  .social-bar__icon {
+    font-size: 20px;
+    &:hover {
+      color: lighten( $black, 50% )
+    }
+    &.social-bar__icon--container {
+      @include normalize-link($red);
+      padding-left: 0;
+    }
+  }
+
+  .social-bar__follow-text {
+    @extend .normal;
+    font-size: 0.75em;
+  }
+
+  .social-bar__find-text {
+    @extend .normal;
+    font-size: 0.75em;
+    text-decoration: none;
+  }
+
+  .social-bar__icon-container {
+    padding-left: 0;
+    text-align: right;
+  }
+  .social-bar__icon--map {
+    width: 18px;
+  }
+  .social-bar__icon--facebook {
+    padding-left: 5px;
+    color: $black;
+  }
+  .social-bar__icon--instagram {
+    padding-left: 5px;
+    color: $black;
+  }
+  .social-bar__icon--twitter {
+    padding-left: 5px;
+    color: $black;
+  }
+
+  @include media-query(palm) {
+    .social-bar__icon {
+      font-size: 36px;
+    }
+
+    .social-bar__icon--map {
+      width: 25px;
+      margin-top: -10px;
+    }
+    .social-bar__follow-text {
+      display: none;
+    }
+    .social-bar__find-text {
+      font-size: 0.5em;
+    }
+  }
+}

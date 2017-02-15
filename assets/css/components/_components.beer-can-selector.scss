@@ -1,0 +1,146 @@
+.beer-can-selector {
+
+  &__header {
+    &.h2{
+      line-height: 1;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__can-list-container {
+    padding-bottom: 0px;
+    .beer-can-selector__information-panel--active {
+      padding-bottom: 20px;
+    }
+
+  }
+  &__can-list {
+    background-color: $white;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 40px 0;
+  }
+
+  &__can-list-item {
+    @include down-arrow();
+    border-left: 1px solid $medium-gray;
+    opacity: 0.4;
+    height: auto;
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    padding: 0 48px;
+    cursor: pointer;
+    transition: opacity .3s ease-in;
+
+    &--iipa {
+      border-right: 1px solid $medium-gray;
+    }
+
+    &--initial {
+      opacity: 1;
+    }
+
+    &--active {
+      opacity: 1;
+      transition: opacity .3s ease-in;
+
+      &:after,
+      &:before {
+        display: block;
+      }
+      &:before {
+        bottom: -51px;
+      }
+      &:after {
+        bottom: -50px;
+      }
+    }
+
+    &:hover {
+      opacity: 1;
+      transition: opacity .3s ease-in;
+    }
+
+  }
+
+  &__can-list-image {
+    width: 125px;
+    height: auto;
+  }
+
+  &__information-panel {
+    @extend .normal;
+    display: none;
+    opacity: 0;
+    max-height: 0;
+    background-color: $light-gray;
+    color: $black;
+    padding: 0 10px;
+
+    &--active {
+      display: block;
+      max-height: 1000px;
+      transition: opacity 1s ease-in;
+      opacity: 1;
+    }
+  }
+
+  &__panel {
+    padding: 20px 10px;
+    font-size: 0.8em;
+    display: inline-block;
+    vertical-align: top;
+
+    p {
+      margin: 0;
+      padding: 0 0 10px 0;
+    }
+  }
+
+  &__fact,
+  &__fact-term {
+    padding: 2px 10px 2px 0;
+  }
+
+  &__fact-table {
+    width: 100%;
+  }
+
+  &__fact-row {
+    vertical-align: top;
+    border-bottom: 4px solid $white;
+  }
+
+  /* Overrides */
+  @include media-query(palm) {
+    &__panel {
+      padding-bottom: 20px;
+    }
+
+    &__can-list-item {
+      width: 33%;
+      margin: 0;
+      padding: 0 5px;
+      &--active {
+        &:before,
+        &:after {
+          display: none;
+        }
+      }
+    }
+    &__can-list-contanier{
+      width: 100%;
+    }
+  }
+
+  @include media-query(lap-and-up) {
+  }
+}
+
+.wrapper {
+  &--beer-can-selector{
+    background-color: $light-gray;
+  }
+}

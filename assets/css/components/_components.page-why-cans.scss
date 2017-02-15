@@ -1,0 +1,44 @@
+.page-why-cans {
+  .header--masthead{
+    background-color: $light-gray;
+  }
+
+  .post-container {
+    text-align: center;
+    @extend .normal;
+  }
+
+  .why-cans {
+
+    &__header {
+      border-bottom-color: $black;
+      &--can-fans {
+        border-bottom-color: $white;
+      }
+    }
+
+    &__about {
+      margin: 40px 20px 60px 20px;
+
+    }
+
+    &__fans {
+      padding: 60px 0;
+      color: $white;
+      background-color: $gray-text;
+    }
+
+    &__list {
+      @extend .normal;
+      margin: 10px 0;
+      padding: 10px 0;
+      list-style-type: none;
+    }
+
+    &__list-item-link {
+      @include normalize-link($white);
+    }
+
+  }
+
+}

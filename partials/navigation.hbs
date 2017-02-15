@@ -1,0 +1,13 @@
+<div class="buttons">
+  <a class="nav-toggler toggle-push-right">
+    <i class="fa fa-bars fa-3x"></i>
+  </a>
+</div>
+
+<nav class="menu push-menu-right">
+  <ul>
+    {{#foreach navigation}}
+      <li><a class="site-nav__link site-nav__{{slug}} h3" href="{{url absolute='true'}}">{{label}}</a></li>
+    {{/foreach}}
+  </ul>
+</nav>

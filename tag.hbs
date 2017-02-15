@@ -1,0 +1,16 @@
+{{!< default}}
+<div class="container">
+  <div class="posts lap-and-up-three-quarters">
+    {{#foreach posts}}
+        {{> full-post}}
+    {{/foreach}}
+  </div><!--
+
+  --><div class="all-tags lap-and-up-one-quarter">
+    {{> all-tags}}
+  </div>
+  {{!! After all the posts, show the newer/older pagination links }}
+  {{#if pagination}}
+      {{pagination}}
+  {{/if}}
+</div>

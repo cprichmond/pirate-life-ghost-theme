@@ -1,0 +1,38 @@
+.page-template {
+  .header {
+    &.header--masthead {
+      background-image: none;
+      background-color: $light-gray;
+      height: 100%;
+    }
+
+    &.header--padding {
+      display: none;
+    }
+  }
+
+  .why-pirate-life,
+  .why-adelaide {
+    &__header {
+      color: $black;
+      border-bottom-color: $black;
+      margin-bottom: 40px;
+    }
+  }
+
+  .footer {
+    display: none;
+  }
+
+  p {
+    padding: 10px 0;
+  }
+
+  h2 {
+    @extend .h2;
+    padding: 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    border-bottom: solid 10px $white;
+  }
+}

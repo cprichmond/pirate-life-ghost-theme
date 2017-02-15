@@ -1,0 +1,70 @@
+.post-container {
+  background-color: $white;
+}
+
+.post {
+  @extend .normal-cd18;
+  color: $gray-text;
+  padding-bottom: 20px;
+
+  p {
+    margin: 0;
+    &.byline.vcard {
+      margin: 0;
+    }
+  }
+
+  .article {
+    &__heading-text {
+      text-transform: uppercase;
+      padding: 0;
+      margin: 0;
+      color: $gray-text;
+    }
+
+    &__link-text {
+      @extend .normal;
+      @include normalize-link($gray-text);
+      &:hover {
+        color: lighten($black, 50%);
+        text-decoration: underline;
+      }
+    }
+
+    &__date {
+      color: $medium-gray;
+      font-size: 0.75em;
+      font-style: italic;
+      > time {
+        font-style: italic;
+      }
+    }
+
+    &__image {
+      width: 100%;
+    }
+  }
+
+  .read-more {
+    @include normalize-link($gray-text);
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .home-template & {
+    &.featured {
+      section {
+        p {
+          background-color: $light-medium-gray;
+          padding: 15px 15px;
+          &:first-child {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+
+}

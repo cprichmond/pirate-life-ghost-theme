@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="shortcut icon" href="{{asset 'images/fav.ico'}}">
+
+    {{! Styles'n'Scripts }}
+    <!-- Announce the rss feed -->
+    <link rel="alternate" type="application/rss+xml" title="{{@blog.title}} » Feed" href="{{@blog.url}}/rss" />
+
+    <!-- Include the main stylesheet-->
+    <link rel="stylesheet" id="pirate-life-stylesheet-css" href="{{asset 'css/main.css'}}" type="text/css" media="all"/>
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+    {{> social}}
+    
+    <div class="header header--masthead wrapper">
+      <div class="container content">
+        {{navigation}}
+        {{> header}}
+      </div>
+    </div>
+
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+    {{> footer }}
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    <!-- Custom Scripts -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{asset 'dist/bundle.js'}}"></script>
+
+</body>
+</html>

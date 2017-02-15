@@ -1,0 +1,38 @@
+
+{{! This partial will list a post excerpt using the 'excerpt' theme helper in Ghost }}
+<article class="{{post_class}}">
+
+  <header class="article__header">
+
+    <h4 class="article__heading-text h4">
+      <div class="article__link-text" href="{{url}}" rel="bookmark" title="{{title}}">{{title}}</div>
+    </h4>
+
+    <span class="article__date">
+      <time class="updated"
+            datetime="{{date published_at format='YYYY-MM-DD'}}"
+            pubdate="">
+        {{date published_at format='DD.MM.YYYY'}}
+      </time>
+    </span>
+    <span class="tags--article">
+      {{#if tags}}
+        {{#foreach tags}}
+          <a href="/tag/{{slug}}" class="tag__link">
+            <i class="fa fa-tag">
+              <span class="tag__text">{{name}}</span>
+            </i>
+          </a>
+        {{/foreach}}
+      {{/if}}
+    </span>
+
+  </header> <!-- end article header -->
+
+  <section>
+    <div>
+     {{content}}
+    </div>
+  </section> <!-- end article section -->
+
+</article> <!-- end list article  -->

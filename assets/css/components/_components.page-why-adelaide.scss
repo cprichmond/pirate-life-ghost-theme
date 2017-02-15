@@ -1,0 +1,61 @@
+.page-why-adelaide {
+  .header--masthead {
+    background-color: $light-gray;
+  }
+
+  .wrapper--body-content {
+    text-align: center;
+    padding: 0;
+    .container {
+      max-width: none;
+    }
+  }
+
+  .why-adelaide {
+    &__header {
+      color: $white;
+      border-bottom-color: $white;
+    }
+
+    &__container {
+      background-image: url('/assets/images/pages/why-adelaide/whyadelaide.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      height: 880px;
+      padding: 18% 25% 0 25%;
+      position: relative;
+    }
+    @include media-query(palm) {
+      &__container {
+        padding: 20px;
+        height: 680px;
+      }
+    }
+
+    &__text {
+      @extend .normal;
+      color: $white;
+      z-index: 1000;
+    }
+
+    &__faves {
+      padding-top: 40px;
+      background-color: $dark-gray;
+      min-height: 600px;
+    }
+
+    &__list {
+      @extend .normal;
+      margin: 10px 0;
+      padding: 10px 0;
+      list-style-type: none;
+    }
+
+    &__list-item-link {
+      @include normalize-link($white);
+      text-transform: uppercase;
+    }
+
+  }
+}

@@ -1,0 +1,135 @@
+.page-why {
+  .header--masthead{
+    background-color: $light-gray;
+  }
+
+  .post-container {
+    text-align: center;
+    @extend .normal;
+  }
+
+  .why-pirate-life {
+    &__header--why {
+      color: $white;
+      border-bottom-color: $white;
+    }
+
+    &__container {
+      background-image: url('/assets/images/pages/why-pirate-life/WHY_PIRATELIFE_BKGROUND.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      height: 880px;
+      padding: 18% 25% 0 25%;
+    }
+
+    @include media-query(palm) {
+      &__container {
+        padding: 20px;
+        height: 680px;
+      }
+    }
+
+    &__text {
+      @extend .normal;
+      color: $white;
+      margin: 0;
+    }
+
+    &__video {
+      min-height: 200px;
+      padding: 5% 5%;
+    }
+  }
+
+  .why-adelaide {
+
+    &__container {
+      background-image: url('/assets/images/pages/why-adelaide/whyadelaide.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      height: 880px;
+      padding: 18% 25% 0 25%;
+      position: relative;
+      color: $white;
+
+      &.arrow-box {
+        position: relative;
+        background-color: $white;
+      }
+      &.arrow-box:after,
+      &.arrow-box:before {
+        top: 0;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+
+      &.arrow-box:after {
+        border-color: rgba(255, 255, 255, 0);
+        border-top-color: #fff;
+        border-width: 30px;
+        margin-left: -30px;
+      }
+      &.arrow-box:before {
+        border-color: rgba(255, 255, 255, 0);
+        border-top-color: #fff;
+        border-width: 36px;
+        margin-left: -36px;
+      }
+    }
+    @include media-query(palm) {
+      &__container {
+        padding: 30px;
+        height: 880px;
+      }
+    }
+
+    &__header {
+      color: $white;
+      border-bottom-color: $white;
+    }
+
+    &__text {
+      @extend .normal;
+      color: $white;
+      z-index: 1000;
+    }
+
+    &__faves {
+      padding-top: 40px;
+      background-color: $dark-gray;
+      min-height: 600px;
+    }
+
+    //    &__faves-list {
+    //      color: $white;
+    //      @extend .normal;
+    //      margin: 10px 0;
+    //      padding: 10px 0;
+    //      list-style-type: none;
+    //      text-transform: uppercase;
+    //    }
+
+    &__list {
+      @extend .normal;
+      margin: 10px 0;
+      padding: 10px 0;
+      list-style-type: none;
+    }
+
+    &__list-item-link {
+      @include normalize-link($white);
+      text-transform: uppercase;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+  }
+}

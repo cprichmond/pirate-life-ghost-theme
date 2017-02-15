@@ -1,0 +1,62 @@
+
+@include fontFace('TradeGothicLT-BoldCondTwenty','../../assets/fonts/2C32D2_0_0');
+@include fontFace('TradeGothicLTPro-Cn18','../../assets/fonts/2C32D2_1_0');
+@include fontFace('TradeGothicLTPro-Cn18Obl','../../assets/fonts/2C32D2_2_0');
+@include fontFace('TradeGothicLTPro-BdCn20' ,'../../assets/fonts/2C32D2_3_0');
+
+@include fontFace('FontAwesome Regular', '../../assets/fonts/fontawesome-webfont');
+
+.normal {
+  font-family: TradeGothicLT-BoldCondTwenty;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+}
+
+.normal-cd18 {
+  @extend .normal;
+  font-family: TradeGothicLTPro-Cn18;
+}
+
+.heading {
+  @extend .normal;
+  margin: 0;
+  padding: 0;
+}
+
+.h1 {
+  @extend .heading;
+  font-size: 2em;
+}
+
+.h2 {
+  @extend .heading;
+  font-size: 2em;
+}
+
+.h3 {
+  @extend .heading;
+  font-size: 2.5em;
+
+  &--white {
+    color: $white;
+  }
+
+  &--light-gray {
+    color: $gray-heading;
+  }
+}
+
+.h4 {
+  @extend .header;
+  font-size: 1.5em;
+}
+
+.blurb-text {
+  @extend .normal;
+  font-size: 1em;
+  &.blurb-text--white {
+    color: $white;
+  }
+}
+

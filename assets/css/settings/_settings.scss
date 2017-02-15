@@ -1,0 +1,47 @@
+// _vars.css.scss
+
+// Default font-family
+$base-font-family: 'Helvetica', sans-serif;
+
+// Color and font-family for the brand object
+$brand-face: 'Helvetica Neue', sans-serif;
+$brand-color: red;
+
+// Push classes to move grid items
+$push: true;
+
+// Grid
+$inuit-enable-layout--large: true;
+$use-grids: true;
+
+// Nav abstraction, e.g. throws the list into horizontal mode
+$use-nav: true;
+
+// Island and islet objects - http://csswizardry.com/2011/10/the-island-object
+$use-island: true;
+
+// Buttons toolkit - http://csswizardry.com/beautons/
+$use-beautons: true;
+
+$inuit-base-background-color: #fff;
+
+//Colors
+$red: #ed4222;
+$faded-red: #f27b65;
+$active-grey: #808284;
+$facebook: #3B5998;
+$twitter: #4099FF;
+$instagram: #517fa4;
+$white: #fff;
+$black: #000;
+$gray-heading: #58585B;
+$gray-text: #333;
+$dark-gray: #222;
+$light-gray: #E0E1E2;
+$light-medium-gray: #d1d2d4;
+$medium-gray: #999;
+$gray: #333;
+$mid-gray: #666;
+$black: #000;
+
+

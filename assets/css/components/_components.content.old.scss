@@ -1,0 +1,307 @@
+.image-block {
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.horizontal-rule {
+  @include horizontal-gradient($black, $white, $black);
+  height: 3px;
+  margin: 0 20%;
+  padding: 0;
+  border: none;
+}
+
+body {
+  background-color: $gray;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.content {
+  .content__block {
+    width: 100%;
+    .content__block-map-icon {
+      width: 30px;
+    }
+    &.content__block--map {
+      .content__block-blurb {
+        background: url('/assets/images/home/header_pin_white.png') transparent no-repeat center top / 30px 40px;
+        padding-top: 50px;
+      }
+    }
+  }
+
+  .content__block-link {
+    @include normalize-link($gray-text);
+  }
+  .content__block-heading {
+    @extend .gradient-ruler;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 5px 0;
+
+    &-link {
+      @include normalize-link($white);
+    }
+
+    &.content__block-heading--blog {
+      display: inline-block;
+      padding: 25px 0 0 0;
+      margin-left: 10px;
+      border-bottom: 8px solid $gray-text;
+      width: 136px;
+    }
+
+    .content__block-heading--small {
+      text-transform: lowercase !important;
+      border: none;
+      font-size: 0.25em;
+    }
+
+
+  }
+
+  .content__block--link-text {
+    @include normalize-link($white);
+    text-transform: lowercase !important;
+    font-size: 0.6em;
+    border: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include media-query(palm) {
+    .content__block {
+      &.content__block--beer {
+        background-color: $white;
+        margin: 0;
+      }
+
+      &.content__block--beer-list {
+        display: none;
+        color: $dark-gray;
+        .beer-list {
+          list-style-type: none;
+        }
+      }
+
+      .content__block-image {
+        &.content__image--beer-list {
+          width: 100%;
+          height: 600px;
+        }
+      }
+
+      &.content__block--beer-list {
+        @extend .image-block;
+        background-image: url('/assets/images/logos/PL_logo_white.png');
+      }
+
+      &.content__block--brewers {
+        @extend .image-block;
+        background-image: url('/assets/images/home/whypiratelife.png');
+      }
+
+      &.content__block--why-adelaide {
+        @extend .image-block;
+        background-image: url('/assets/images/home/whyadelaide.png');
+      }
+
+      &.content__block--why-cans {
+        @extend .image-block;
+        background-image: url('/assets/images/home/whycans.png');
+      }
+
+      &.content__block--shirt{
+        @extend .image-block;
+        background-image: url('/assets/images/home/HOME_A_ts.png');
+        background-position: bottom center;
+        height: 600px;
+
+        .content__block-heading {
+          text-align: right;
+        }
+      }
+
+      &.content__block--cap{
+        @extend .image-block;
+        background-image: url('/assets/images/home/HOME_A_caps.png');
+        background-position: center center;
+        height: 300px;
+
+        .content__block-heading {
+          text-align: right;
+        }
+      }
+
+      &.content__block--map {
+        @extend .image-block;
+        background-image: url('/assets/images/home/HOME_P_address.png');
+        .content__block-blurb {
+          font-size: 2em;
+          text-transform: uppercase;
+        }
+      }
+
+      &.content__block--blog {
+        background-color: $white;
+        .content__block-heading {
+          text-align: left;
+          color: $black;
+        }
+      }
+    }
+
+    .content__block-wrapper {
+      @include vertical-align;
+    }
+
+    .content__block-video {
+      padding: 10px 20px;
+    }
+
+
+    .content__block-blurb {
+      color: $white;
+      text-align: center;
+      margin: 0;
+    }
+  }
+}
+
+
+@include media-query(lap-and-up) {
+  .content {
+    .content__block {
+      .content__block-wrapper {
+        padding-top: 3%;
+      }
+
+      margin-top: 10px;
+
+      &.content__block--beer-list {
+        background-image: url('/assets/images/logos/PL_logo_white.png');
+        background-size: contain;
+        float: left;
+        height: 600px;
+        color: $dark-gray;
+        .beer-list {
+          padding-left: 5px;
+          list-style-type: none;
+        }
+      }
+
+      .content__block-heading {
+        text-transform: uppercase;
+        &.content__block--beer {
+          padding-left: 100px;
+          font-size: 1.5em;
+          background-color: $white;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &.content__block--brewers,
+      &.content__block--why-adelaide,
+      &.content__block--why-cans {
+        @extend .image-block;
+        display: inline-block;
+        height: 194px;
+        background-size: cover;
+        background-position: left center;
+      }
+
+      &.content__block--brewers {
+        background-image: url('/assets/images/home/whypiratelife.png');
+        &:hover{
+          background-image: url('/assets/images/home/whypiratelife_rollover.png');
+        }
+      }
+
+      &.content__block--why-adelaide {
+        background-image: url('/assets/images/home/whyadelaide.png');
+        &:hover{
+          background-image: url('/assets/images/home/whyadelaidebandw.png');
+        }
+      }
+
+      &.content__block--why-cans {
+        background-image: url('/assets/images/home/whycans.png');
+        &:hover{
+          background-image: url('/assets/images/home/whycansbandw.png');
+        }
+      }
+
+      &.content__block--blog {
+        padding: 25px 20px;
+        background-color: $white;
+        overflow: hidden;
+        margin-top: 20px;
+        .content__block-heading {
+          text-align: left;
+        }
+      }
+
+      .content__blog-post {
+        float: left;
+        padding: 0 10px;
+      }
+
+      &.content__block--shirt,
+      &.content__block--cap {
+        @extend .image-block;
+        display: inline-block;
+        margin: 20px 0;
+        height: 505px;
+
+        .content__block-heading {
+          text-align: right;
+        }
+      }
+
+
+      &.content__block--shirt{
+        background-image: url('/assets/images/home/HOME_A_ts.png');
+        margin-top: 1px;
+      }
+
+      &.content__block--cap{
+        background-image: url('/assets/images/home/HOME_A_caps.png');
+        margin-top: 1px;
+      }
+
+      &.content__block--map {
+        @extend .image-block;
+        height: 500px;
+        background-image: url('/assets/images/home/HOME_P_address.png');
+        background-position: center center;
+        .content__block-wrapper {
+          padding-top: 100px;
+          .content__block-blurb {
+            text-align: center;
+            font-size: 2em;
+            text-transform: uppercase;
+          }
+        }
+
+      }
+
+      .content__block-video {
+        padding-top: 25px;
+      }
+
+      .content__block-blurb {
+        text-align: center;
+      }
+    }
+  }
+}

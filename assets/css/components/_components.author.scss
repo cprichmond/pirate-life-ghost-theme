@@ -1,0 +1,66 @@
+.tag-template,
+.author-template,
+.post-template {
+
+  .post {
+    padding: 20px;
+
+    p {
+      padding: 15px 0;
+    }
+  }
+
+  /* Common styles for all sizes */
+  .header {
+
+    &.header--masthead {
+      background-image: none;
+      height: 100%;
+    }
+
+    &.header--padding {
+      display: none;
+    }
+
+  }
+
+  .wrapper {
+    &.wrapper--body-content {
+      background-color: $white;
+    }
+  }
+
+
+  /* Overrides for different sizes */
+  @include media-query(palm) {
+    .nav-toggler {
+    }
+
+    .header {
+      .header--logo img{
+        width: auto;
+        height: 50px;
+      }
+    }
+
+    .h4 {
+      padding: 0;
+      margin: 0;
+    }
+
+    .all-tags {
+      display: none;
+    }
+
+  }
+
+  @include media-query(lap-and-up) { 
+    .posts,
+    .all-tags {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+  }
+
+}

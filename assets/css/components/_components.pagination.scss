@@ -1,0 +1,16 @@
+
+.pagination {
+	@extend .normal;
+  background-color: $white;
+	padding: 20px;
+  color: $dark-gray;
+
+  .older-posts,
+  .newer-posts {
+    @include normalize-link($dark-gray);
+    text-decoration: underline;
+     &:hover {
+       text-decoration: none;
+     }
+  }
+}

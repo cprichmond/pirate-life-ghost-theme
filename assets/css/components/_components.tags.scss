@@ -1,0 +1,41 @@
+.tags {
+  margin: 55px 0 0 0;
+
+  .tags__list {
+    padding: 0;
+    list-style: none;
+  }
+
+  .tags__header {
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .tag__text {
+    @extend .normal-cd18;
+  }
+
+  .tag__link {
+    @include normalize-link($gray-text);
+  }
+
+}
+
+.tags--article {
+    float: right;
+
+    > i {
+      font-size: 0.75em;
+      text-transform: lowercase;
+      @include normalize-link($gray-text);
+    }
+
+    .tag__text {
+      @extend .normal-cd18;
+    }
+
+    .tag__link {
+      @include normalize-link($gray-text);
+    }
+  }

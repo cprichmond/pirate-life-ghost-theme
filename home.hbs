@@ -1,0 +1,68 @@
+{{!< default}}
+<div class="sections">
+  <section class="beer-can-selector content__block content__block--beer-can-selector"></section>
+  <section class="why-adelaide content__block content__block--why-adelaide">
+    <div class="container container--why-adelaide">
+      <h3 class="h3 h3--light-gray why-adelaide__heading">EST. 2014. HINDMARSH, SA</h3>
+      <p class="normal why-adelaide__text">Adelaide deserves to be famous for more than churches and ice coffee.<br/>
+          Sunshine, great food, better wine and famous festivals and some damn good beer!<br/>
+          We’re excited to joining the fold.
+      </p>
+      <p class="normal why-adelaide__link"><a href="/why#adelaide" class="why-adelaide__link-text">WHY ADELAIDE&nbsp;&nbsp;&gt;</a></p>
+    </div>
+  </section>
+  <section class="video content__block content__block--video">
+    <div class="container">
+      <iframe class="youtube" width="560" height="315" src="//www.youtube.com/embed/YNbxfNdurPs?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+  <section class="why-cans content__block content__block--why-cans">
+    <div class="container">
+      <div class="why-cans__signature">
+        <h3 class="why-cans__comeback h3">THE BEER CAN IS MAKING <br/>A COMEBACK!</h3>
+        <p class="why-cans__link"><a href="/why-cans" class="why-adelaide__link-text">FIND OUT MORE&nbsp;&nbsp;&gt;</a></p>
+      </div>
+    </div>
+  </section>
+  <section class="blog content__block content__block--blog">
+    <div class="container">
+      <a href="/blog" class="content__block-link">
+        <h3 class="content__block-heading content__block-heading--blog h3">Blog.&nbsp;
+            <span class="content__block-heading content__block-heading--small">see all &gt;</span>
+        </h3>
+      </a>
+      <div class="content__blog-post-contanier">
+        {{#foreach posts}}
+          {{#if featured}}
+            <div class="content content__blog-post lap-and-up-one-third">
+              {{> list-post}}
+            </div>
+          {{/if}}
+        {{/foreach}}
+      </div>
+    </div>
+  </section>
+  <section class="merch content__block content__block--merch">
+    <div class="container">
+      <a class="merch__link" href="http://shop.piratelife.com.au" target="_blank">
+        <div class="merch__image merch__image--cap lap-and-up-one-third"></div>
+        <div class="merch__image merch__image--shirt lap-and-up-two-thirds">
+          <div class="merch__text">Get Merch</div>
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="why-pirate content__block content__block--why-pirate">
+    <div class="container">
+      <h3 class="h3">DO WHAT YOU WANT, WHEN YOU WANT,<br/>
+      WHEREVER YOU WANT. WE PLAN TO LIVE<br/>
+      THE LIFE OF PIRATES!</h3>
+      <p class="why-pirate__link"><a href="/why" class="why-pirate__link-text">FIND OUT MORE&nbsp;&nbsp;&gt;</a></p>
+    </div>
+
+  </section>
+  <section class="location content__block content__block--location">
+    <p class="location__address location__address--state">89 SOUTH ROAD, HINDMARSH<br/> SA</p>
+  </section>
+</div>
+
